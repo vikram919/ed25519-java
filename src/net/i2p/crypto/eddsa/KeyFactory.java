@@ -30,7 +30,7 @@ import net.i2p.crypto.eddsa.spec.EdDSAPublicKeySpec;
  */
 public final class KeyFactory extends KeyFactorySpi {
 
-    protected PrivateKey engineGeneratePrivate(KeySpec keySpec)
+    public PrivateKey engineGeneratePrivate(KeySpec keySpec)
             throws InvalidKeySpecException {
         if (keySpec instanceof EdDSAPrivateKeySpec) {
             return new EdDSAPrivateKey((EdDSAPrivateKeySpec) keySpec);
